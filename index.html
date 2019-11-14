@@ -44,21 +44,120 @@
         <h2>Gigapixel Story Map.</h2>
           <iframe src="https://uploads.knightlab.com/storymapjs/59811ff726d41ad29d264283148710ee/ivory-week-8-assignment/draft.html" frameborder="0" width="100%" height="800"></iframe>
 
- 
-        <h2>Sources</h2>
-        <h3>StoryMap</h3>
-          <h4>Title Slide: "Ivory: A Spatial Story"</h4>
 
-            <ul>
-              <li>Map
-                <li>Citation in <a href="http://id.lib.harvard.edu/alma/99153653849703941/catalog">Chicago Style</a></li>
-                  <aside>Covered under what license</aside>
-        </ul>
-        </li>
       
         <details>
         <summary><b>Environmental Footprint </b></summary>
-      <img src="images/carbonalyser111319.pdf" style="max-width:30%;" alt="Screenshot of Carbonalyser analysis">
+      <img src="carbonalyser111319" style="max-width:30%;" alt="Screenshot of Carbonalyser analysis">
+          <head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="vendor/chartist/chartist.css"/>
+<link rel="stylesheet" href="popup.css"/>
+</head>
+
+<body>
+<div class="body">
+    <h1>Carbonalyser</h1>
+
+    <div class="header-links">
+        <a id="informationLink" translate="moreInformation" translate-href="moreInformationUrl"></a>
+        <a id="legalNoticeLink" translate="legalNotice" translate-href="legalNoticeUrl"></a>
+    </div>
+    <hr>
+
+    <div>
+        <button id="startButton" class="button" translate="start"></button>
+        <button id="stopButton" class="button hidden" translate="stop"></button>
+        <button id="resetButton" class="button hidden" translate="reset"></button>
+    </div>
+
+    <p id="analysisInProgressMessage" class="hidden" translate="analysisInProgress"></p>
+
+    <div id="stats" class="hidden">
+        <hr>
+
+        <div class="leftColumn"><div class="ct-chart ct-golden-section"></div></div>
+        <div class="rightColumn">
+            <span id="statsListTitle" translate="topTraffic"></span>
+            <ul id="statsListItems"></ul>
+        </div>
+        <div class="clear"></div>
+
+        <hr>
+
+        <div id="selectRegionForm">
+            <p>
+                <select id="selectRegion" class="fullwidth">
+                    <option value="" translate="selectRegionPlaceholder"></option>
+                    <option value="regionEuropeanUnion" translate="regionEuropeanUnion"></option>
+                    <option value="regionFrance" translate="regionFrance"></option>
+                    <option value="regionUnitedStates" translate="regionUnitedStates"></option>
+                    <option value="regionChina" translate="regionChina"></option>
+                    <option value="regionOther" translate="regionOther"></option>
+                </select>
+            </p>
+            <p class="selectRegionHelp" translate="selectRegionHelp"></p>
+        </div>
+
+        <div class="clear"></div>
+
+        <div id="equivalence">
+            <p id="equivalenceTitle"></p>
+            <div class="column50">
+                <div class="block">
+                    <img src="img/time.svg" />
+                    <span id="duration"></span>
+                    <span id="durationItem" class="unit">minutes</span>
+                </div>
+            </div>
+            <div class="column50">
+                <div class="block">
+                    <img src="img/energy.svg" />
+                    <span id="kWhTotalValue"></span>
+                    <span id="kWhTotalUnit" class="unit">kWh</span>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="column50">
+                <div class="block">
+                    <img src="img/arrows.svg" />
+                    <span id="mbTotalValue"></span>
+                    <span id="mbTotalUnit" class="unit" translate="mbTotalUnit"></span>
+                </div>
+            </div>
+            <div class="column50">
+                <div class="block">
+                    <img src="img/gco2.svg" />
+                    <span id="gCO2Value"></span>
+                    <span id="gCO2Item" class="unit">gCO<sub>2</sub>e</span>
+                </div>
+            </div>
+            <div class="clear"></div>
+
+            <p translate="digitalEquivalenceTitle"></p>
+            <div class="column50">
+                <div class="block">
+                    <img src="img/smartphone.svg" />
+                    <span id="chargedSmartphonesValue"></span>
+                    <span id="chargedSmartphonesUnit" class="unit" translate="chargedSmartphonesUnit"></span>
+                </div>
+            </div>
+            <div class="column50">
+                <div class="block">
+                    <img src="img/car.svg" class="icon-car" />
+                    <span id="kmByCarValue"></span>
+                    <span id="kmByCarUnit" class="unit" translate="kmByCarUnit"></span>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <p><a class="button button-fullwidth" translate="howToChange" translate-href="howToChangeUrl"></a></p>
+        </div>
+    </div>
+
+</div>
+<script src="vendor/chartist/chartist.js"></script>
+<script src="popup.js"></script>
+</body>
 
 
         <p> The results show that I have spent 12771 minutes browsing the internet. The CO2 emissions associated with this usage is equivalent to 226 smartphones and 8.514 kilometers driven by car. About a quarter of those 12771 minutes were spent on Canvas, and another quarter were spent at the David Rumsey Historical Map Collection. However, the accuracy of Carbonalyser, is constrained by memory and technology. Though my own forgetfulness may present CO2 emissions as less than they truly are, I was lucky on the technology front in that this extension did not malfunction and my data was never reset. I believe that during the first few weeks of this course, I forgot to use Firefox and thus I was not collecting data for Carbonalyser. Because of this lapse, I would guess that the graph represents about 7 or 8 weeks of work. 
@@ -70,7 +169,7 @@
 
       <details>
         <summary><b>Sources</b></summary>
-          <h4>Homann Heirs 1743 Map of West Africa</h4>
+          <h4>Ivory: a Spatial Story on Homann Heirs 1743 Map of West Africa</h4>
             <ol>
 
               <li> <b>Slide 1: Introduction</b></li>
